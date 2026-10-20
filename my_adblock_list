@@ -39,3 +39,27 @@ dailytin24.com###myModal2
 www.umodder.com##.searchlist_ads_pop
 !chặn ký tự không phải unicode, loại trừ tên miền .vn
 /^https?:\/\/([^\/]+\.)?xn--[^\/]+(?<!\.vn)\//$document,strict1p
+! --- CẢNH BÁO CÁC TLD LẠM DỤNG LỪA ĐẢO CAO ---
+||*.top^$document,strict1p
+||*.xyz^$document,strict1p
+||*.work^$document,strict1p
+||*.click^$document,strict1p
+||*.buzz^$document,strict1p
+||*.gq^$document,strict1p
+||*.cf^$document,strict1p
+||*.ml^$document,strict1p
+||*.tk^$document,strict1p
+||*.ga^$document,strict1p
+! --- CHẶN TRUY CẬP TRỰC TIẾP QUA ĐỊA CHỈ IPV4 ---
+/^https?:\/\/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}(:[0-9]+)?\//$document,strict1p
+! Loại trừ mạng nội bộ / Router cá nhân (nếu cần quản trị thiết bị gia đình)
+@@||192.168.*$document
+@@||10.*$document
+@@||127.0.0.1$document
+! --- CHỐNG RÒ RỈ IP THỰC QUA WEBRTC TRÊN TRANG LẠ ---
+*$webrtc
+! --- CHẶN TẢI XUỐNG TỆP THỰC THI NGUY HIỂM TỪ BÊN THỨ 3 ---
+/.*\.(exe|scr|msi|bat|cmd|vbs|pif|iso)(\?.*)?$/$third-party
+! --- CHẶN KỊCH BẢN GIẢ MẠO ĐĂNG NHẬP TELEGRAM TRÊN WEB BÊN NGOÀI ---
+||oauth.telegram.org^$third-party
+||telegram.org/js/telegram-widget.js$third-party
