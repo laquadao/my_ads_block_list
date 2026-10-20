@@ -37,4 +37,5 @@ www.kpkuang.org###sp2 > .fed-show-md-block.fed-hide-sm.fed-hide-xs
 dailytin24.com###myModal
 dailytin24.com###myModal2
 www.umodder.com##.searchlist_ads_pop
+!chặn ký tự không phải unicode, loại trừ tên miền .vn
 /^https?:\/\/([^\/]+\.)?xn--[^\/]+(?<!\.vn)\//$document,strict1p
