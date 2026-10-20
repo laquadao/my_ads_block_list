@@ -37,3 +37,4 @@ www.kpkuang.org###sp2 > .fed-show-md-block.fed-hide-sm.fed-hide-xs
 dailytin24.com###myModal
 dailytin24.com###myModal2
 www.umodder.com##.searchlist_ads_pop
+/^https?:\/\/([^\/]+\.)?xn--[^\/]+(?<!\.vn)\//$document,strict1p
